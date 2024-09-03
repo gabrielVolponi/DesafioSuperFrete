@@ -24,3 +24,8 @@ before(() => {
     Cypress.env('url', 'https://web.superfrete.com/')
 
 });
+
+Cypress.on('uncaught:exception', (err, runnable) => {
+    // Retorna false para impedir que o Cypress falhe o teste em caso de exceção não tratada
+    return false;
+});

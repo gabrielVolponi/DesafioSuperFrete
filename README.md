@@ -3,6 +3,15 @@
 > 
 Este repositório contém o framework de automação de testes desenvolvido com Cypress, focado em garantir a qualidade dos principais fluxos da aplicação da SuperFrete. O framework foi criado para automatizar testes de pré-requisitos, fluxos principais e cenários de exceção, proporcionando uma abordagem robusta para a validação contínua do sistema.
 
+## 📖 Funcionalidades
+
+Testes de Pré-requisitos: Verificações essenciais que garantem que o ambiente e os componentes da aplicação estão configurados corretamente antes da execução dos testes principais.
+
+Fluxos Principais: Cobertura dos processos críticos da SuperFrete, garantindo que funcionalidades essenciais estejam sempre funcionando como esperado.
+
+Cenários de Exceção: Testes que validam o comportamento do sistema em situações inesperadas ou de erro, assegurando a resiliência da aplicação.
+
+
 
 ## 💻 Pré-requisitos
 
