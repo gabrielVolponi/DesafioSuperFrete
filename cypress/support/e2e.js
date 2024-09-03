@@ -18,3 +18,9 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+
+before(() => {
+    Cypress.env('url', 'https://web.superfrete.com/')
+
+});
