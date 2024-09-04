@@ -1,5 +1,10 @@
 {
   "devDependencies": {
     "cypress": "^13.14.1"
+  },
+
+  "scripts": {
+    "GUI-1366": "npx cypress open --config viewportWidth=1366,viewportHeight=768",
+    "headless": "npx cypress run"
   }
 }
