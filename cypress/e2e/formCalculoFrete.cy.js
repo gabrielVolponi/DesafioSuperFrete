@@ -113,7 +113,7 @@ describe('template spec', () => {
 
   //fluxos principais
   describe('Fluxo Principal', () => {
-    it('Preenchimento Form Dados Válidos', () => {
+    it.only('Preenchimento Form Dados Válidos', () => {
       cy.get('@inputCepOrigem').should('be.visible').type(cepValidos[0], { delay: 0 })
 
       cy.get('@selectPeso').click().then(() => {
