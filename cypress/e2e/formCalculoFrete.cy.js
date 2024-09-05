@@ -1,3 +1,4 @@
+//gerando massa de teste
 const cepValidos = [
   '08090284',
   '05407002'
@@ -40,7 +41,6 @@ describe('template spec', () => {
 
     })
   });
-
 
   //fluxos pré-requisitos
   describe.skip('Pré-requisitos', () => {
@@ -151,9 +151,46 @@ describe('template spec', () => {
 
   });
 
-
-
   //fluxos exceção
+  describe('Fluxos Excessão', () => {
+    it('Envio form com Altura (<0,4cm ou >150cm)', () => {
+      cy.get('@inputAltura').type('0', { delay: 0 }).then($inputAltura => {
+        const valorInputAltura = $inputAltura.val()
+        expect(valorInputAltura).eq('0')
+      }).then(() => {
+        cy.get('@inputAltura').clear().type('170', { delay: 0 }).then($inputLargura => {
+          const valorInputAltura = $inputLargura.val()
+          expect(valorInputAltura).eq('170')
+        })
+      });
+    });
+
+    it('Envio form com Largura <8cm ou >150cm', () => {
+      cy.get('@inputLargura').type('6', { delay: 0 }).then($inputLargura => {
+        const valorInputLargura = $inputLargura.val()
+        expect(valorInputLargura).eq('6')
+      }).then(() => {
+        cy.get('@inputLargura').clear().type('170', { delay: 0 }).then($inputLargura => {
+          const valorInputLargura = $inputLargura.val()
+          expect(valorInputLargura).eq('170')
+        })
+      });
+    });
+
+    it('Envio form com comprimento <13cm ou >150cm', () => {
+      cy.get('@inputComprimento').type('6', { delay: 0 }).then($inputLargura => {
+        const valorInputComprimento = $inputLargura.val()
+        expect(valorInputComprimento).eq('6')
+      }).then(() => {
+        cy.get('@inputComprimento').clear().type('170', { delay: 0 }).then($inputLargura => {
+          const valorInputComprimento = $inputLargura.val()
+          expect(valorInputComprimento).eq('170')
+        })
+      })
+    });
+  });
+});
 
 
-})
+
+
